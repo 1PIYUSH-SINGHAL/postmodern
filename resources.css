@@ -1,0 +1,106 @@
+@import url("styles.css");
+
+.resources-page {
+  padding-top: 200px;
+  padding-bottom: 120px;
+  max-width: 1100px;
+  margin: auto;
+  padding-inline: 24px;
+}
+
+.resources-hero {
+  text-align: center;
+  margin-bottom: 88px;
+}
+
+.resources-hero h1 {
+  font-size: clamp(3rem, 6vw, 4.5rem);
+  margin-bottom: 16px;
+}
+
+.resources-hero p {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-size: 1.4rem;
+  color: #444;
+  max-width: 760px;
+  margin: auto;
+}
+
+.resources-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 48px;
+  margin-bottom: 96px;
+}
+
+.resource-card {
+  background: #fafafa;
+  border-radius: 24px;
+  padding: 48px;
+  border: 1px solid var(--border);
+  transition: transform 0.35s cubic-bezier(0.16,1,0.3,1),
+              box-shadow 0.35s ease;
+}
+
+.resource-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 30px 70px rgba(124,58,237,0.16);
+}
+
+.resource-card h3 {
+  font-size: 1.6rem;
+  margin-bottom: 16px;
+}
+
+.resource-card p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #444;
+  margin-bottom: 24px;
+}
+
+.resource-card ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.resource-card li {
+  margin-bottom: 14px;
+}
+
+.resource-card a {
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--purple);
+  position: relative;
+}
+
+.resource-card a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--purple), var(--cyan));
+  transition: width 0.3s ease;
+}
+
+.resource-card a:hover::after {
+  width: 100%;
+}
+
+.resources-note {
+  text-align: center;
+  max-width: 700px;
+  margin: auto;
+}
+
+.resources-note p {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-size: 1.3rem;
+  color: #444;
+}
